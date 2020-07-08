@@ -79,9 +79,7 @@ public class TasksTest {
 		public void naoDevedeveSalvarTarefaSemData() throws MalformedURLException {
 			WebDriver driver = acessarAplicacao();
 			try {
-				
-		
-						
+								
 			//clicar em Add Todo
 			driver.findElement(By.id("addTodo")).click();
 			
@@ -104,7 +102,7 @@ public class TasksTest {
 	}
 		
 		@Test
-		public void deveSalvarTarefaComDataPassada() throws MalformedURLException {
+		public void naoDeveSalvarTarefaComDataPassada() throws MalformedURLException {
 			WebDriver driver = acessarAplicacao();
 			try {
 				
@@ -113,7 +111,7 @@ public class TasksTest {
 			driver.findElement(By.id("addTodo")).click();
 			
 			//Escrever a descrição
-			driver.findElement(By.id("task")).sendKeys("Teste via Selenium3");
+			driver.findElement(By.id("task")).sendKeys("Teste via Selenium2");
 			
 			//Escrever a data 
 			driver.findElement(By.id("dueDate")).sendKeys("10/10/2030");
